@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { setTitle } from '../../redux/appRedux';
 import { allPlaces } from '../../redux/actions/places/placesActions';
+import '../../App.css';
 
 import { Map } from '../../components/map/Map';
 
@@ -19,8 +20,8 @@ const PlacesMap = () => {
 
   return (
     <>
-      <Grid container spacing={1} style={{ marginTop: '10px' }}>
-        <Grid item xs={12}>
+      <Grid containerclassName="animated-container" spacing={1} style={{ marginTop: '10px' }}>
+        <Grid item className="animated-grid" xs={12}>
           <Paper sx={{ p: 2 }}>
               
               <Map places={places}/>

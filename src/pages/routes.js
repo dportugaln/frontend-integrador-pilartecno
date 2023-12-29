@@ -1,5 +1,6 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from "./layouts/DashboardLayout";
+import Dashboard from "./dashboard/Dashboard";
 import NotFound from "./layouts/NotFound";
 import Places from "./places/Places";
 import PlaceAdd from "./places/Create";
@@ -12,7 +13,7 @@ const Routes = () => {
       path: '/',
       element: <DashboardLayout />,
       children: [
-        { path: '', element: <Navigate to="/places" replace/> },
+        { path: '', element: <Dashboard /> },
         { path: 'places', element: <Places /> },
         { path: 'places/add', element: <PlaceAdd /> },
         { path: 'places/edit/:id', element: <PlaceEdit /> },

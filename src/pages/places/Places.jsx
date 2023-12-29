@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import PlacesList from '../../components/places/PlacesList';
 
 import { AlertMsg } from '../../components/alert/alert';
+import '../../App.css'; 
 
 
 const Places = () => {
@@ -17,25 +18,25 @@ const Places = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setTitle('Sitios de interés'));
+    dispatch(setTitle('Listado de sitios'));
   })
 
   return (
     <>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
+      <Grid containerclassName="animated-container" spacing={3}>
+        <Grid item className="animated-grid" xs={12}>
           <Paper sx={{ p: 2 }} style={{ alignContent: 'center', alignItems: 'center' }}>
             
             <AlertMsg />
 
-            <Button variant="contained" onClick={() => navigate('/places/add')}> Agregar </Button>
+            <Button sx={{ backgroundColor: "#26647b ", "&:hover": { color: "#26647b", backgroundColor: "#f1f1f0"} }} variant="contained" onClick={() => navigate('/places/add')} > Agregar </Button>
 
           </Paper>
         </Grid>
       </Grid>
 
-      <Grid container spacing={3} style={{ marginTop: '10px' }}>
-        <Grid item xs={12}>
+      <Grid containerclassName="animated-container" spacing={3} style={{ marginTop: '10px' }}>
+        <Grid item className="animated-grid" xs={12}>
           <Paper sx={{ p: 2 }}>
             <PlacesList />
           </Paper>

@@ -1,4 +1,4 @@
-const URL_API = 'localhost:27017';
+const URL_API = 'http://localhost:4000';
 
 export const getPlaces = async () => {
   try {

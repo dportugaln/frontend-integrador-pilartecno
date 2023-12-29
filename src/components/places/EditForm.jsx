@@ -169,7 +169,6 @@ const EditForm = (props) => {
               />
 
               <TextField
-                required
                 label="URL Imagen"
                 variant="outlined"
                 inputRef={urlImgFieldRef}

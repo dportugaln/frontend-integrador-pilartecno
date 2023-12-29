@@ -5,12 +5,12 @@ import 'leaflet/dist/leaflet.css';
 import {EventClick} from './EventClick'
 import { MarkerSatus } from "./Marker";
 
-const mapPosition = [-29.4142176, -66.8907965];
+const mapPosition = [-29.42926007352962, -66.86982600431625];
 
 export const Map = ( { places }) => {
 
   return (
-    <MapContainer center={mapPosition} zoom={12} scrollWheelZoom={true} style={{ height: '100vh', width: '100wh' }}>
+    <MapContainer center={mapPosition} zoom={16} scrollWheelZoom={true} style={{ height: '100vh', width: '100wh' }}>
 
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

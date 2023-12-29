@@ -135,11 +135,9 @@ const CreateForm = () => {
               />
 
               <TextField
-                required
                 label="URL Imagen"
                 variant="outlined"
                 inputRef={urlImgFieldRef}
-                // defaultValue={urlImgFieldRef}
                 style={styles.styleInput}
                 onChange={ () => setImage() }
               />

@@ -82,9 +82,9 @@ const TablenNotes = () => {
             <TableCell>Nombre</TableCell>
             <TableCell>Dirección</TableCell>
             <TableCell>Teléfono</TableCell>
+            <TableCell>E-mail</TableCell>
             <TableCell>Actualizado</TableCell>
             <TableCell>Acciones</TableCell>
-            {/* <TableCell align="right">Sale Amount</TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -101,14 +101,14 @@ const TablenNotes = () => {
                   <TableCell>{row.name}</TableCell>
                   <TableCell>{row.address}</TableCell>
                   <TableCell>{row.phone}</TableCell>
+                  <TableCell>{row.email}</TableCell>
                   <TableCell>{new Date(row.updatedAt).toLocaleString()}</TableCell>
                   <TableCell>
                     <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                      <Button onClick={() => navigate(`/places/edit/${row._id}`)}> <EditIcon /> </Button>
-                      <Button onClick={() => handleDelete(row._id)}> <DeleteIcon /> </Button>
+                      <Button onClick={() => navigate(`/places/edit/${row._id}`)} sx={{ backgroundColor: "#26647b ", "&:hover": { color: "#26647b", backgroundColor: "#f1f1f0"} }}> <EditIcon /> </Button>
+                      <Button onClick={() => handleDelete(row._id)} sx={{ backgroundColor: "#26647b ", "&:hover": { color: "#26647b", backgroundColor: "#f1f1f0"} }}> <DeleteIcon /> </Button>
                     </ButtonGroup>
                   </TableCell>
-                  {/* <TableCell align="right">{`$${row.amount}`}</TableCell> */}
                 </TableRow>
               ))
 

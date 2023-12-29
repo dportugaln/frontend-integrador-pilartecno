@@ -16,7 +16,7 @@ export const MarkerSatus = ( props ) => {
   const { name, lat, lon, address, phone, email } = props;
 
   const iconMarkup = renderToStaticMarkup(
-    <i className=" fa fa-map-marker" style={{ color: 'red', }} />
+    <i className=" fa fa-map-marker" style={{ color: 'crimson', fontSize: '15px'}} />
   );
 
   const customMarkerIcon = divIcon({
