@@ -21,7 +21,7 @@ const MenuItems = () => {
         <ListItemIcon>
           <ListAltIcon />
         </ListItemIcon>
-        <ListItemText primary="Listado de sitios" />
+        <ListItemText primary="Listado" />
       </ListItemButton>
       <ListItemButton onClick={() => navigate("/map")}>
         <ListItemIcon>

@@ -17,7 +17,7 @@ const EditForm = (props) => {
   const operationResult = useSelector((state) => state.app.operationResult);
   const dispatcher = useDispatch();
 
-  const [ imageSource, setImageSource ] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLR0uw5vGaFyZAEKskr8KKioOYvV4bzdLIHWk1QDvrzTZL4rgYv8V03ZfTTVuklFw7QBA&usqp=CAU')
+  const [imageSource, setImageSource] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLR0uw5vGaFyZAEKskr8KKioOYvV4bzdLIHWk1QDvrzTZL4rgYv8V03ZfTTVuklFw7QBA&usqp=CAU')
 
   const idFieldRef = useRef();
   const nameFieldRef = useRef();
@@ -70,7 +70,7 @@ const EditForm = (props) => {
   const setImage = () => {
     setImageSource(urlImgFieldRef.current.value)
   }
-  
+
   const styles = {
     styleInput: {
       marginTop: 10
@@ -83,7 +83,7 @@ const EditForm = (props) => {
       <AlertMsg />
 
 
-      <h1 style={{ color: '#757575' }}>Modificar Datos</h1>
+      <h1 style={{ color: '#757575' }}>Modificar datos</h1>
 
       <Box
         component="form"
@@ -101,10 +101,11 @@ const EditForm = (props) => {
                 label="ID"
                 variant="outlined"
                 inputRef={idFieldRef}
-                defaultValue={idFieldRef}
+                defaultValue={idFieldRef.current?.value}
                 disabled
                 aria-readonly
                 style={styles.styleInput}
+                InputLabelProps={{ shrink: true }}
               />
 
               <TextField
@@ -112,8 +113,9 @@ const EditForm = (props) => {
                 label="Nombre"
                 variant="outlined"
                 inputRef={nameFieldRef}
-                defaultValue={nameFieldRef}
+                defaultValue={nameFieldRef.current?.value}
                 style={styles.styleInput}
+                InputLabelProps={{ shrink: true }}
               />
 
               <TextField
@@ -121,24 +123,27 @@ const EditForm = (props) => {
                 label="Dirección"
                 variant="outlined"
                 inputRef={addressFieldRef}
-                defaultValue={addressFieldRef}
+                defaultValue={addressFieldRef.current?.value}
                 style={styles.styleInput}
+                InputLabelProps={{ shrink: true }}
               />
 
               <TextField
                 label="Teléfono"
                 variant="outlined"
                 inputRef={phoneFieldRef}
-                defaultValue={phoneFieldRef}
+                defaultValue={phoneFieldRef.current?.value}
                 style={styles.styleInput}
+                InputLabelProps={{ shrink: true }}
               />
 
               <TextField
                 label="Email"
                 variant="outlined"
                 inputRef={emailFieldRef}
-                defaultValue={emailFieldRef}
+                defaultValue={emailFieldRef.current?.value}
                 style={styles.styleInput}
+                InputLabelProps={{ shrink: true }}
               />
 
             </Grid>
@@ -154,29 +159,33 @@ const EditForm = (props) => {
                 label="Latitud"
                 variant="outlined"
                 inputRef={latitudeFieldRef}
-                defaultValue={latitudeFieldRef}
+                defaultValue={latitudeFieldRef.current?.value}
                 style={styles.styleInput}
+                InputLabelProps={{ shrink: true }}
               />
 
-              <TextField
-                required
-                label="Longitud"
-                variant="outlined"
-                inputRef={longitudeFieldRef}
-                defaultValue={longitudeFieldRef}
-                style={styles.styleInput}
-                onChange={ () => setImage() }
-              />
+<TextField
+  required
+  label="Longitud"
+  variant="outlined"
+  inputRef={longitudeFieldRef}
+  defaultValue={longitudeFieldRef.current?.value}
+  style={styles.styleInput}
+  InputLabelProps={{ shrink: true }}
+/>
 
               <TextField
                 label="URL Imagen"
                 variant="outlined"
                 inputRef={urlImgFieldRef}
-                defaultValue={urlImgFieldRef}
+                defaultValue={urlImgFieldRef.current?.value}
                 style={styles.styleInput}
+                onChange={() => setImage()}
+                InputLabelProps={{ shrink: true }}
+
               />
 
-              <Button variant="contained" onClick={() => _editPlace()} style={{ marginTop: 10 }}>Guardar</Button>
+              <Button sx={{ backgroundColor: "#26647b ", "&:hover": { color: "#26647b", backgroundColor: "#f1f1f0" } }} variant="contained" onClick={() => _editPlace()} style={{ marginTop: 10 }}>Guardar</Button>
 
 
             </Grid>
@@ -188,9 +197,9 @@ const EditForm = (props) => {
             {
               place.URL_img &&
                 place.URL_img.length > 0 && place.URL_img[0] !== 'undefined' && place.URL_img[0] !== '' ?
-                  <img src={place.URL_img[0]} alt="imagen" style={{ height: '200px' }} />
+                <img src={place.URL_img[0]} alt="imagen" style={{ height: '200px' }} />
                 :
-                  <img src={imageSource} alt="imagen" style={{ height: '200px' }} />
+                <img src={imageSource} alt="imagen" style={{ height: '200px' }} />
             }
 
           </Grid>

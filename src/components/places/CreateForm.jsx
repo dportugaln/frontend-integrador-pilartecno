@@ -142,7 +142,7 @@ const CreateForm = () => {
                 onChange={ () => setImage() }
               />
 
-              <Button variant="contained" onClick={() => handleCreate()} style={{ marginTop: 10 }}>Agregar</Button>
+              <Button sx={{ backgroundColor: "#26647b ", "&:hover": { color: "#26647b", backgroundColor: "#f1f1f0" } }} variant="contained" onClick={() => handleCreate()} style={{ marginTop: 10 }}>Agregar</Button>
 
             </Grid>
 

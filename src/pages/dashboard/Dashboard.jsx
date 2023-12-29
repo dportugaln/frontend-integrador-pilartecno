@@ -28,7 +28,7 @@ const Dashboard = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(setTitle('Sitios de interés de la UNLaR'));
+        dispatch(setTitle('Puntos de interés de la UNLaR'));
     })
 
 
@@ -49,7 +49,7 @@ const Dashboard = () => {
                         ...headingStyle,
                         textShadow: '10px 10px 14px rgba(0, 0, 0, 0.5)'
                     }}>
-                    Sitios de interés para la comunidad universitaria
+                    Puntos de interés para la comunidad universitaria
                 </Typography>
             </Grid>
 
@@ -60,7 +60,7 @@ const Dashboard = () => {
                         ¡Bienvenido a UNLaR Navigator!
                         </Typography>
                         <Typography>
-                        Esta herramienta está diseñada para realzar la experiencia de nuestra comunidad universitaria. Su objetivo es proporcionar un acceso fácil y eficiente a diversos puntos de interés dentro y fuera del campus.
+                        Esta herramienta está diseñada para mejorar la experiencia de nuestra comunidad universitaria. Su objetivo es proporcionar un acceso fácil y eficiente a diversos puntos de interés dentro y fuera del campus.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -80,7 +80,7 @@ const Dashboard = () => {
                 <Card onClick={redirectToPlaces} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
                     <CardContent style={{ display: 'flex', alignItems: 'center' }}>
                         <Typography variant="h6" style={{ marginRight: '10px' }}>
-                            Listado de sitios
+                            Listado
                         </Typography>
                     </CardContent>
                 </Card>
