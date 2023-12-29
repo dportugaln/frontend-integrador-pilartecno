@@ -27,19 +27,27 @@ Para instalar y ejecutar esta aplicación en tu entorno local, sigue estos pasos
 
 1. Clona el repositorio o descarga el código:
 
-```git clone https://github.com/dportugaln/frontend-integrador-pilartecno.git```
+```bash
+git clone https://github.com/dportugaln/frontend-integrador-pilartecno.git
+```
 
 2. Navega al directorio del proyecto:
 
-```cd frontend-integrador-pilartecno```
+```bash
+cd frontend-integrador-pilartecno
+```
 
 3. Instala las dependencias:
 
-```npm install```
+```bash
+npm install
+```
 
 4. Ejecuta la aplicación:
 
-```npm start```
+```bash
+npm start
+```
 
 
 ## Uso
